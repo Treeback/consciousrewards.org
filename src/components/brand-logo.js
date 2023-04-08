@@ -6,7 +6,7 @@ export default function GatsbyContentfulLogo() {
   return (
     <Flex>
       <img src={logo} style={{ height: "70px" }} />
-      <h3>Sadhana Freak</h3>
+      {/* <h3>Sadhana Freak</h3> */}
     </Flex>
   )
 }
