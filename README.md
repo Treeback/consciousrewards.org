@@ -3,6 +3,8 @@ Conscious Rewards Landing Page
 
 Welcome to the Conscious Rewards Landing Page repository! This project is built using Gatsby, Contentful, and is deployed using Netlify. The landing page is designed to showcase the features and benefits of the Conscious Rewards app, an innovative habit-forming Yoga app that helps users elevate their Sadhana journey.
 
+[Link to website](https://consciousrewards.org)
+
 Table of Contents
 -----------------
 
