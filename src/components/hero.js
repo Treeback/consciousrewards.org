@@ -1,6 +1,8 @@
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as React from "react"
+import Lottie from 'react-lottie';
+import * as animationData from '../assets/animation.json';
 import {
   Box,
   ButtonList,
@@ -14,17 +16,27 @@ import {
 } from "./ui"
 
 export default function Hero(props) {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData.default,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
+
   return (
     <Section>
       <Container>
-        <Flex gap={4} variant="responsive">
+        <Flex gap={2} variant="responsive">
           <Box width="half">
-            {props.image && (
+            {props.image &&
               <GatsbyImage
                 alt={props.image.alt}
                 image={getImage(props.image.gatsbyImageData)}
               />
-            )}
+            }
+            <Lottie options={defaultOptions}/>
           </Box>
           <Box width="half">
             <Heading as="h1">
@@ -57,6 +69,7 @@ export const query = graphql`
       id
       gatsbyImageData
       alt
+      url
     }
   }
 `
